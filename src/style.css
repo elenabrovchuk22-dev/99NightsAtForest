@@ -1,0 +1,146 @@
+/* Сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow-x: hidden;
+
+    /* Анимированный градиент (день → закат → ночь) */
+    background: linear-gradient(-45deg, #1a2a6c, #2c5364, #0f2027, #000000);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+/* Анимация фона */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Hover на ссылки */
+.nav a:hover {
+    filter: brightness(1.5);
+    transform: translateY(-3px);
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.btn {
+    padding: 14px 35px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background: #ff7b00;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Hover кнопки */
+.btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    filter: brightness(1.2);
+}
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 420px;
+    transition: 0.4s ease;
+}
+
+/* Увеличение изображения */
+.hero-image img:hover {
+    transform: scale(1.1);
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+/* Hover карточки */
+.card:hover {
+    transform: translateY(-12px) rotate(1deg);
+    filter: brightness(1.2);
+}
+
+/* Картинки */
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: 0.4s ease;
+}
+
+.card img:hover {
+    transform: scale(1.12);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+}
